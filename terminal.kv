@@ -1,0 +1,216 @@
+#:kivy 1.11.1
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+#:import _ terminal._
+
+<GlobalScreenManager>:
+    transition: NoTransition()
+    HomeScreen:
+        name: 'home'
+    UserScreen:
+        name: 'user'
+    ClockInOutScreen:
+        name: 'clock'
+    ErrorScreen:
+        name: 'error'
+    AdminScreen:
+        name: 'admin'
+
+# gray background
+<HomeScreen, UserScreen, ClockInOutScreen, ErrorScreen, AdminScreen>:
+    canvas.before:
+        Color:
+            rgba: 0.388, 0.431, 0.447, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<AdminScreen>:
+    RelativeLayout:
+        Label:
+            pos: 0, 200
+            font_size: '25sp'
+            text: _('Administrator')
+        BackButton:
+            source: 'images/back.png'
+            size_hint_y: None
+            height: 60
+            pos: 346, 393
+            on_press: root.back()
+        TextInput:
+            size_hint: .8, .8
+            pos: 80, 10
+            text: root.message
+            font_size: '20sp'
+            disabled: True
+
+<ErrorScreen>:
+    RelativeLayout:
+        Label:
+            pos: 0, 200
+            font_size: '25sp'
+            text: _('An error occurred')
+        BackButton:
+            source: 'images/back.png'
+            size_hint_y: None
+            height: 60
+            pos: 346, 393
+            on_press: root.back()
+        TextInput:
+            size_hint: .8, .8
+            pos: 80, 10
+            text: root.message
+            font_size: '20sp'
+            disabled: True
+
+<ClockInOutScreen>:
+    RelativeLayout:
+        BackButton:
+            source: 'images/back.png'
+            size_hint_y: None
+            height: 60
+            pos: 346, 393
+            on_press: root.back()
+        Image:
+            pos: 0, 200
+            size_hint_y: None
+            height: 250
+            source: root.image
+        Label:
+            pos: 0, -90
+            text: root.current_time
+            font_size: '40sp'
+        Label:
+            pos: 0, -150
+            text: root.message
+            font_size: '40sp'
+
+<UserScreen>:
+    BoxLayout:
+        spacing: 25
+        BoxLayout:
+            padding: 25, 25, 25, 25
+            orientation: 'vertical'
+            Image:
+                source: root.user_image
+                pos: 300, 0
+                size_hint_y: 1.5
+            BoxLayout:
+                size: 350, 95
+                spacing: 25
+                Button:
+                    size_hint: .8, .8
+                    font_size: '25sp'
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'middle'
+                    text: _('Arrive')
+                    background_normal: ''
+                    background_color: 96/255, 142/255, 71/255, 1
+                    on_press: root.clock_in()
+                Button:
+                    size_hint: .8, .8
+                    font_size: '25sp'
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'middle'
+                    text: _('Leave')
+                    background_normal: ''
+                    background_color: 158/255, 36/255, 22/255, 1
+                    on_press: root.clock_out()
+        GridLayout:
+            cols: 2
+            Label:
+                text: root.welcome
+                size_hint_y: 2
+                font_size: '25sp'
+                text_size: self.size
+                valign: 'middle'
+            RelativeLayout:
+                BackButton:
+                    source: 'images/back.png'
+                    size_hint_y: None
+                    height: 60
+                    pos: 10, 50
+                    on_press: root.manager.current = 'home'
+            Label:
+                text: _('Today:')
+                font_size: '25sp'
+                text_size: self.size
+                size_hint_x: 2
+            Label:
+                text: root.today_hours
+                font_size: '25sp'
+                text_size: self.size
+            Label:
+                text: _('This week:')
+                font_size: '25sp'
+                text_size: self.size
+            Label:
+                text: root.week_hours
+                font_size: '25sp'
+                text_size: self.size
+            Label:
+                text: _('Last week:')
+                font_size: '25sp'
+                text_size: self.size
+            Label:
+                text: root.last_week_hours
+                font_size: '25sp'
+                text_size: self.size
+            Label:
+                text: _('Approved vacation:')
+                font_size: '25sp'
+                text_size: self.size
+
+            Label:
+                text: root.holidays
+                font_size: '25sp'
+                text_size: self.size
+            Widget
+            Widget
+
+<HomeScreen>:
+    current_working: current_working
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            ClockWidget
+            Label:
+                text: _('Place the chip on the reader\nto perform actions.')
+                valign: 'middle'
+                halign: 'center'
+                font_size: '20sp'
+                text_size: self.size
+        RelativeLayout:
+            Label:
+                pos: 55, 0
+                text: _('Currently active employees:')
+                font_size: '25sp'
+                valign: 'top'
+                halign: 'left'
+                text_size: self.size
+            CurrentWorkingWidget:
+                id: current_working
+                orientation: 'tb-lr'
+                pos: 65, -40
+                spacing: 50, 40
+                padding: 30, 10, 0, 80
+
+<ClockWidget>:
+    RelativeLayout:
+        Label:
+            text: root.hours_minutes
+            font_size: '100sp'
+            text_size: self.size
+            pos: 50, 100
+        Label:
+            text: root.seconds
+            text_size: self.size
+            font_size: '50sp'
+            pos: 310, 147
+        Label:
+            text: root.date_string
+            font_size: '25sp'
+            text_size: self.size
+            halign: 'left'
+            pos: 55, 80

@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-30 19:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: terminal.py:73
+msgid "Unknown "
+msgstr ""
+
+#: terminal.py:180
+msgid "User does not exist: "
+msgstr ""
+
+#: terminal.py:183
+msgid "Hello "
+msgstr ""
+
+#: terminal.py:205
+msgid " Days"
+msgstr ""
+
+#: terminal.py:215
+msgid "Your are already clocked in."
+msgstr ""
+
+#: terminal.py:217
+msgid "Server error. Could not clock in user. ID: "
+msgstr ""
+
+#: terminal.py:229
+msgid "Your are already clocked out."
+msgstr ""
+
+#: terminal.py:231
+msgid "Server error. Could not clock out user. ID: "
+msgstr ""
+
+#: terminal.py:254
+msgid "Welcome!"
+msgstr ""
+
+#: terminal.py:257
+msgid "Goodbye!"
+msgstr ""
+
+#: terminal.kv:32
+msgid "Administrator"
+msgstr ""
+
+#: terminal.kv:51
+msgid "An error occurred"
+msgstr ""
+
+#: terminal.kv:106
+msgid "Arrive"
+msgstr ""
+
+#: terminal.kv:116
+msgid "Leave"
+msgstr ""
+
+#: terminal.kv:136
+msgid "Today:"
+msgstr ""
+
+#: terminal.kv:145
+msgid "This week:"
+msgstr ""
+
+#: terminal.kv:153
+msgid "Last week:"
+msgstr ""
+
+#: terminal.kv:161
+msgid "Approved vacation:"
+msgstr ""
+
+#: terminal.kv:179
+msgid ""
+"Place the chip on the reader\n"
+"to perform actions."
+msgstr ""
+
+#: terminal.kv:187
+msgid "Currently active employees:"
+msgstr ""

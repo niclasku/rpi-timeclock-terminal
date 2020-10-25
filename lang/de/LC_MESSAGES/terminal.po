@@ -1,0 +1,102 @@
+# English translations for PACKAGE package.
+# Copyright (C) 2020 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-30 19:56+0200\n"
+"PO-Revision-Date: 2020-03-29 17:15+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: terminal.py:73
+msgid "Unknown "
+msgstr "Unbekannt "
+
+#: terminal.py:180
+msgid "User does not exist: "
+msgstr "Benutzer existiert nicht: "
+
+#: terminal.py:183
+msgid "Hello "
+msgstr "Hallo "
+
+#: terminal.py:205
+msgid " Days"
+msgstr " Tage"
+
+#: terminal.py:215
+msgid "Your are already clocked in."
+msgstr "Sie sind bereits eingestempelt."
+
+#: terminal.py:217
+msgid "Server error. Could not clock in user. ID: "
+msgstr "Serverfehler. Benutzer konnte nicht eingestempelt werden. ID: "
+
+#: terminal.py:229
+msgid "Your are already clocked out."
+msgstr "Sie sind bereits ausgestempelt."
+
+#: terminal.py:231
+msgid "Server error. Could not clock out user. ID: "
+msgstr "Serverfehler. Benutzer konnte nicht ausgestempelt werden. ID: "
+
+#: terminal.py:254
+msgid "Welcome!"
+msgstr "Herzlich Willkommen!"
+
+#: terminal.py:257
+msgid "Goodbye!"
+msgstr "Auf Wiedersehen!"
+
+#: terminal.kv:32
+msgid "Administrator"
+msgstr "Administrator"
+
+#: terminal.kv:51
+msgid "An error occurred"
+msgstr "Es ist ein Fehler aufgetreten"
+
+#: terminal.kv:106
+msgid "Arrive"
+msgstr "Kommen"
+
+#: terminal.kv:116
+msgid "Leave"
+msgstr "Gehen"
+
+#: terminal.kv:136
+msgid "Today:"
+msgstr "Heute:"
+
+#: terminal.kv:145
+msgid "This week:"
+msgstr "Diese Woche:"
+
+#: terminal.kv:153
+msgid "Last week:"
+msgstr "Letzte Woche:"
+
+#: terminal.kv:161
+msgid "Approved vacation:"
+msgstr "Genehmigter Urlaub:"
+
+#: terminal.kv:179
+msgid ""
+"Place the chip on the reader\n"
+"to perform actions."
+msgstr ""
+"Lege den Chip auf den Leser,\n"
+"um Aktionen durchzuführen."
+
+#: terminal.kv:187
+msgid "Currently active employees:"
+msgstr "Zurzeit aktive Mitarbeiter:"
