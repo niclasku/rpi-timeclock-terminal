@@ -142,6 +142,7 @@ interval = 50        # check interval
 
 ## Screenshots
 ![HomeScreen](./screenshots/home.png)
+![UserScreen](./screenshots/user.png)
 ![ClockInScreen](./screenshots/arrive.png)
 ![ClockOutScreen](./screenshots/leave.png)
 ![AdminScreen](./screenshots/admin.png)
